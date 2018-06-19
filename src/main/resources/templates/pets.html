@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pets</title>
+</head>
+<body>
+    <header>
+        <h1>Virtual Pets Revenge</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/pets">Pets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+        </figure>
+        <section class="pets">
+            <ul>
+                <li th:each="pet : ${pets}">
+                    <figure>
+                        <img src="" alt="" /><!-- add an appropriate image -->
+                        <figcaption></figcaption><!-- add an appropriate description -->
+                    </figure>
+                    <article class="petDetails">
+                        <h2 th:text="${pet.name}"></h2>
+                        <ul>
+                            <li th:text="${pet.hunger}"></li>
+                            <li th:text="${pet.thirst}"></li>
+                            <li th:text="${pet.happiness}"></li>
+                        </ul>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <small>&copy; 2018 More Pets</small>
+    </footer>
+</body>
+</html>
