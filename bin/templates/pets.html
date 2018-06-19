@@ -29,9 +29,9 @@
                         <figcaption></figcaption><!-- add an appropriate description -->
                     </figure>
                     <article class="petDetails">
-                        <h2 th:text="${pet.name}"></h2>
+                        <h2><a th:href="|@{/pets/}${pet.id}|" th:text="${pet.name}"></a></h2>
                         <ul>
-                            <li th:text="${pet.hunger}"></li>
+                            <li th:text="|Hunger: ${pet.hunger}|"></li>
                             <li th:text="${pet.thirst}"></li>
                             <li th:text="${pet.happiness}"></li>
                         </ul>
